@@ -47,57 +47,47 @@
         </div>
 
         <br><br>
-        <strong> Please enter the token ID and after clicking on Start Duel send the staking amount Your NFT will also
-            be burned so please choose the token Id carefully </strong>
-        <div class="form form-input card container-card">
-            <div>
-                <label class="form-label" for="tokenId">Token ID: </label>
-                <input autocomplete="off" class="form-input" id="tokenId" name="tokenId"></input>
+        <strong> Please choose one card from below and after clicking on Start Duel send the staking amount. If you win
+            your NFT will also
+            be burned so please choose your nft card carefully </strong>
+        <br><br>
+
+        <div class="form form-input container row">
+            <div class="col-6 ">
+                <div class="mt-2">
+                    <label class="form-label " for="tokenId">Token ID: </label>
+                    <input autocomplete="off" style="width: 340px;" class="form-input" id="tokenId" name="tokenId"></input>
+                </div>
             </div>
-            <div>
-                <button class="btn btn-warning" id="btn-duel" type="submit">Start Duel</button>
+            <div class="col-3">
+                <div>
+                    <button class="btn btn-warning" id="btn-duel" type="submit">Start Duel</button>
+                </div>
             </div>
             <br>
-            <div id="result-btn" style="display: none;">
-                <a href="/result"><button class="btn btn-success" type="submit">Show Result</button></a>
-            </div>
+            <div class="col-6">
+                <div id="result-btn" style="display: none; margin-top: 10px; float: right;">
+                    <a href="/result"><button class="btn btn-success" type="submit">Show Result</button></a>
+                </div>
 
-        </div><br><br>
-       
+            </div>
+          
         </div>
-        
-        <div class="container">
+        <div class="container mt-4">
             <div class="row" id="outer-div">
-                <!-- <div class="card bg-light mb-3 nft-card col-3" style="width: 18rem;" onclick="setTokenId(this.id)" id="121212">
-                    <img class="card-img-top" src="https://ipfs.io/ipfs/bafkreifjpbrzxxlpp3dgrd6z2gauften6bbuydmq7fwfdblw7h3waxmtca" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                    </div>
-                    
-                    <div class="card-body row">
-                        <span class="col-6"><strong>Score</strong></span>
-                        <span class="col-6"><strong>Token ID</strong></span>
-                        <span class="col-6">23232</span>
-                        <span class="col-6">23232323</span>
-                    </div>
-                </div> -->
-        
+
             </div>
         </div>
 
         <div class="container card" style="display:block" id="container-card">
             You can fetch the NFT token ID from your opensea collection
-            <a id="opensea-url" href="https://opensea.io/collection/nft-game-card" target="_blank"> NFT Game Card
+            <a id="opensea-url" href="https://opensea.io/collection/arcade-card-game" target="_blank"> NFT Game Card
                 Collection on Opensea</a>
             <a id="nfts-url" href="" style="display: none;" target="_blank">Check your NFTs here </a>
 
         </div>
-        </p>
-    </div>
-    <script src="moralis-connection.js"></script>
-    <script src="duel-start.js"></script>
+        <script src="moralis-connection.js"></script>
+        <script src="duel-start.js"></script>
 </body>
 
 </html>
