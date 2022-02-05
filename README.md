@@ -1,4 +1,4 @@
-# NFT Game Card
+# 2048 Card Game
 
 ## How to run the project: 
 
