@@ -52,7 +52,7 @@ function setMoralisData() {
             console.log(nft.contract_address);
 
             const settings = {
-              async: false,
+              async: true,
               crossDomain: true,
               url: `https://api.covalenthq.com/v1/137/tokens/0xb9d53af8a1ad9ed52714c53075d8d2124d0729bc/nft_metadata/${nft.token_id}/?quote-currency=USD&format=JSON&key=ckey_66c30cdb41ca4d87a451559d868`,
               method: 'GET',
