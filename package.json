@@ -1,0 +1,31 @@
+{
+    "name": "ipfs-file-storage",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "start:dev": "nodemon server.js"
+    },
+    "author": "optimus789",
+    "license": "MIT",
+    "dependencies": {
+        "@supercharge/strings": "^1.24.0",
+        "axios": "^0.24.0",
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "ejs": "^3.1.6",
+        "ethers": "^5.5.3",
+        "express": "^4.17.2",
+        "express-fileupload": "^1.2.1",
+        "ipfs": "^0.61.0",
+        "ipfs-http-client": "^55.0.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongodb": "^4.3.1",
+        "mongoose": "^6.2.0",
+        "path": "^0.12.7",
+        "web3": "^1.6.1"
+    }
+}
