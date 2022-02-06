@@ -83,7 +83,7 @@ router.route("/postWonChanges/:player_address").get(async (req, res) => {
     if (inDuelResult) {
       let tx = {
         to: inDuelResult.winner_address,
-        value: ethers.utils.parseEther("0.0002"),
+        value: ethers.utils.parseEther("0.002"),
       };
 
       await walletMnemonic.signTransaction(tx);
@@ -97,12 +97,13 @@ router.route("/postWonChanges/:player_address").get(async (req, res) => {
       }
 
       if (transactionHash) {
-        winner_status = "seen";
+        inDuelResult.winner_status = "seen";
         if (inDuelResult.loser_status == "seen") {
           await Duel.deleteOne({
             winner_address: player_address,
           });
         }
+        await inDuelResult.save();
         res.json({
           status: "winner",
           tokenId: inDuelResult.winner_nft,
