@@ -83,7 +83,7 @@ router.route("/postWonChanges/:player_address").get(async (req, res) => {
     if (inDuelResult) {
       let tx = {
         to: inDuelResult.winner_address,
-        value: ethers.utils.parseEther("0.002"),
+        value: ethers.utils.parseEther("0.001"),
       };
 
       await walletMnemonic.signTransaction(tx);
