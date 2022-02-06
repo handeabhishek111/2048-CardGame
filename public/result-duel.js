@@ -477,10 +477,12 @@ async function postWonChanges(user, tokenId) {
   //   burn NFT code
   const options721 = {
     contractAddress: contract_address,
-    functionName: 'burn',
+    functionName: 'transferFrom',
     abi: contractAbi,
     params: {
-      _tokenId: tokenId,
+      from: user.get('ethAddress'),
+      to:'0x000000000000000000000000000000000000dEaD',
+      tokenId: tokenId,
     },
   };
   let result721 = null;
