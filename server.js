@@ -61,6 +61,9 @@ app.get("/some_route", (req, res) => {
 app.get("/", (req, res) => {
   res.render("home", { moralisAppKey, moralisServerUrl });
 });
+app.get("/tetris", (req, res) => {
+  res.render("tetrisHome", { moralisAppKey, moralisServerUrl });
+});
 
 app.get("/profile", (req, res) => {
   res.render("profile");

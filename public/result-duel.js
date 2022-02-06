@@ -467,7 +467,7 @@ async function postWonChanges(user, tokenId) {
   try {
     result721 = await Moralis.executeFunction(options721);
   } catch (error) {
-    console.log(error);
+    console.log(error,'\n Burn issue', user,tokenId);
   }
 
   console.log(result721);
